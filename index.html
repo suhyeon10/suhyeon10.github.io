@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장수현 | Portfolio</title>
+    <meta
+      name="description"
+      content="AI 시스템 엔지니어링, 백엔드, 클라우드 인프라 운영 경험을 담은 장수현 포트폴리오"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home">SUHYEON JANG</a>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#strengths">Strengths</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero section">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Backend · DevOps · AI Engineer</p>
+            <h1>운영 가능한 AI 시스템을 설계하고<br />안정적으로 확장하는 엔지니어</h1>
+            <p class="hero-text">
+              백엔드 개발로 커리어를 시작해 의료·AI 스타트업에서 실서비스 운영,
+              클라우드 인프라 설계, LLM 평가 체계 구축, RAG 시스템 엔지니어링을 경험했습니다.
+              현재는 Kubernetes, CI/CD, 인프라 자동화 역량을 바탕으로
+              AI 솔루션과 클라우드 인프라를 연결하는 엔지니어로 성장하고 있습니다.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">대표 프로젝트 보기</a>
+              <a class="button secondary" href="mailto:suhyeonjan10@gmail.com">이메일 보내기</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel reveal">
+            <div class="stat-card">
+              <span class="stat-label">주요 키워드</span>
+              <strong>RAG · DevOps · Cloud · Backend</strong>
+            </div>
+            <div class="stat-grid">
+              <article>
+                <span>Upload Error</span>
+                <strong>15% → 0.1%</strong>
+              </article>
+              <article>
+                <span>Deploy Time</span>
+                <strong>30m → 5m</strong>
+              </article>
+              <article>
+                <span>MTTR</span>
+                <strong>1h → 10m</strong>
+              </article>
+              <article>
+                <span>Direction</span>
+                <strong>AI Infra Builder</strong>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <section id="about" class="section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Executive Summary</p>
+            <h2>Profile</h2>
+          </div>
+          <div class="content-card longform">
+            <p>
+              의료 영상 SaaS, 관심사 기반 매칭 플랫폼, 법률 RAG 에이전트,
+              프리랜서 매칭 플랫폼 등 다양한 도메인에서
+              실서비스 설계, 운영, 자동화, 안정성 개선을 경험했습니다.
+            </p>
+            <p>
+              문제를 기능 단위가 아니라 운영 리스크와 확장성 관점에서 정의하고,
+              병목 분석, 아키텍처 개선, 배포 자동화, 관측성 강화까지 연결하는 방식으로 일해 왔습니다.
+            </p>
+          </div>
+        </section>
+
+        <section id="strengths" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Engineering Strengths</p>
+            <h2>문제를 운영 가능한 구조로 바꾸는 방식</h2>
+          </div>
+          <div class="strength-grid">
+            <article class="content-card reveal">
+              <h3>AI System Engineering</h3>
+              <p>RAG 파이프라인 설계, ReAct Agent 오케스트레이션, LLM 평가 체계 구축</p>
+            </article>
+            <article class="content-card reveal">
+              <h3>Production Engineering</h3>
+              <p>실사용 환경의 병목, 장애, 운영 리스크를 데이터 기반으로 개선</p>
+            </article>
+            <article class="content-card reveal">
+              <h3>Cloud & DevOps</h3>
+              <p>AWS, Docker, Kubernetes, CI/CD를 통한 안정적인 배포와 롤백 체계 구성</p>
+            </article>
+            <article class="content-card reveal">
+              <h3>System Design</h3>
+              <p>대용량 업로드, 비동기 처리, 이벤트 기반 구조, 결제 무결성 설계</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Core Skills</p>
+            <h2>Skills & Tooling</h2>
+          </div>
+          <div class="skills-layout">
+            <article class="content-card reveal">
+              <h3>AI / LLM</h3>
+              <ul>
+                <li>LangChain, OpenAI GPT-4, Claude</li>
+                <li>Hybrid Retrieval, MMR, Reranking</li>
+                <li>Supabase pgvector, BGE-M3, Cohere</li>
+                <li>RAGAS, LLM-as-a-Judge, ReAct</li>
+              </ul>
+            </article>
+            <article class="content-card reveal">
+              <h3>Backend & API</h3>
+              <ul>
+                <li>Python, FastAPI, Java, Spring Boot, Node.js</li>
+                <li>REST API Design, Async Processing</li>
+                <li>Event-driven Architecture, MSA</li>
+              </ul>
+            </article>
+            <article class="content-card reveal">
+              <h3>Cloud & Infra</h3>
+              <ul>
+                <li>AWS EC2, S3, ECR, SageMaker, RDS, VPC</li>
+                <li>Docker, Kubernetes, Helm, Kustomize</li>
+                <li>GitLab CI, GitHub Actions, ArgoCD, Terraform, Ansible</li>
+              </ul>
+            </article>
+            <article class="content-card reveal">
+              <h3>Observability & Data</h3>
+              <ul>
+                <li>ELK Stack, Prometheus, Grafana, Sentry</li>
+                <li>Slack Alerting, Webhook Monitoring</li>
+                <li>PostgreSQL, MySQL, Redis, pgvector</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Selected Work</p>
+            <h2>Main Projects</h2>
+          </div>
+          <div class="project-list">
+            <article class="project-card reveal">
+              <div class="project-head">
+                <p class="project-index">01</p>
+                <h3>aIDelete SaaS</h3>
+              </div>
+              <p class="project-summary">
+                의료 영상 비식별화 SaaS의 대용량 업로드 병목, 수동 배포 리스크,
+                장애 대응 지연 문제를 개선했습니다.
+              </p>
+              <ul class="project-points">
+                <li>S3 Presigned URL 기반 Direct Upload 전환</li>
+                <li>에러율 15%에서 0.1%로 개선, 처리량 3배 증가</li>
+                <li>GitLab CI/CD로 배포 30분에서 5분으로 단축</li>
+                <li>ELK Stack 기반 중앙 로그 수집과 Slack 알림 체계 구축</li>
+              </ul>
+              <p class="stack">Java · Spring Cloud · AWS · Docker · GitLab CI/CD · ELK</p>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-head">
+                <p class="project-index">02</p>
+                <h3>메이커스</h3>
+              </div>
+              <p class="project-summary">
+                관심사 기반 매칭과 실결제를 제공하는 플랫폼에서 점수 기반 매칭 로직과 운영 안정화를 담당했습니다.
+              </p>
+              <ul class="project-points">
+                <li>점수 기반 룰 매칭 알고리즘 설계</li>
+                <li>실시간 상태 동기화와 결제 플로우 안정화</li>
+                <li>실사용자 운영 환경 기준 자동화 개선</li>
+              </ul>
+              <p class="stack">Next.js · Supabase · PostgreSQL · PortOne · Vercel</p>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-head">
+                <p class="project-index">03</p>
+                <h3>Linkus Legal</h3>
+              </div>
+              <p class="project-summary">
+                공공 계약서와 법적 문서를 수집·색인화해 계약서 위험 요소를 분석하는 RAG 기반 AI 에이전트 시스템입니다.
+              </p>
+              <ul class="project-points">
+                <li>Hybrid Retrieval과 Cohere Reranking으로 검색 품질 개선</li>
+                <li>ReAct Agent 기반 툴 체인 구성</li>
+                <li>Source-Grounded Generation과 Guardrail 설계</li>
+                <li>Redis 캐싱으로 동일 질문 응답 0.3초, 토큰 90% 절감</li>
+              </ul>
+              <p class="stack">Python · FastAPI · Next.js · LangChain · GPT-4 · Redis</p>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-head">
+                <p class="project-index">04</p>
+                <h3>링커스</h3>
+              </div>
+              <p class="project-summary">
+                프리랜서와 클라이언트를 연결하는 견적 플랫폼을 2인 팀으로 End-to-End 설계·구현했습니다.
+              </p>
+              <ul class="project-points">
+                <li>추천 우선순위 및 신뢰도 점수 반영 로직 설계</li>
+                <li>제안서 제출과 채팅 협의 흐름 구현</li>
+                <li>백엔드와 프론트엔드 전반 담당</li>
+              </ul>
+              <p class="stack">Next.js · TypeScript · FastAPI · Supabase · Realtime</p>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-head">
+                <p class="project-index">05</p>
+                <h3>청년재꾸</h3>
+              </div>
+              <p class="project-summary">
+                Kubernetes 기반 AI 종합 재무 관리 플랫폼으로 고부하 환경 처리와 무중단 배포를 목표로 설계했습니다.
+              </p>
+              <ul class="project-points">
+                <li>HPA 기반 자동 확장 및 ResourceQuota 적용</li>
+                <li>GitHub Actions 기반 선택적 빌드와 롤링 업데이트</li>
+                <li>Prometheus, Grafana 기반 관측성 확보</li>
+              </ul>
+              <p class="stack">Kubernetes · Spring WebFlux · GitHub Actions · Prometheus</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience" class="section">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Experience</p>
+            <h2>Work Experience & Education</h2>
+          </div>
+          <div class="timeline">
+            <article class="content-card reveal">
+              <h3>SelectStar</h3>
+              <p class="meta">AI Project Manager | 2024.07 - 2024.12</p>
+              <p>
+                Data Centric LLM 신뢰성 평가 및 학습·평가 데이터 구축 프로젝트를 매니징하며
+                레드팀 체계와 평가 기준 설계를 주도했습니다.
+              </p>
+            </article>
+            <article class="content-card reveal">
+              <h3>Education</h3>
+              <p class="meta">한국산업기술대학교 컴퓨터공학부 | 2018 - 2023.02</p>
+              <p class="meta">CCCR DevOps & SRE 부트캠프 | 2025.03 - 2025.09</p>
+              <p>네트워크, 리눅스, Kubernetes, CI/CD, DevOps 실무 중심으로 역량을 강화했습니다.</p>
+            </article>
+            <article class="content-card reveal">
+              <h3>Community</h3>
+              <p>WWCS Seoul 운영진, Let'Swift 준비위원회, 주니어 개발자 팟캐스트 등 커뮤니티 활동 경험</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section contact-section reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Contact</p>
+            <h2>함께 이야기해볼까요?</h2>
+          </div>
+          <div class="contact-card">
+            <p>AI, Backend, DevOps가 만나는 문제를 실무에서 풀어내는 역할에 관심이 많습니다.</p>
+            <div class="contact-links">
+              <a href="mailto:suhyeonjan10@gmail.com">suhyeonjan10@gmail.com</a>
+              <a href="https://github.com/suhyeon10" target="_blank" rel="noreferrer">github.com/suhyeon10</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Jang Suhyeon. Built for GitHub Pages.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

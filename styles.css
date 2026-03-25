@@ -1,0 +1,374 @@
+:root {
+  --bg: #f2ece4;
+  --surface: rgba(255, 252, 246, 0.82);
+  --surface-strong: #fffaf1;
+  --text: #172126;
+  --muted: #54606a;
+  --line: rgba(23, 33, 38, 0.12);
+  --accent: #0e7c66;
+  --accent-strong: #0a5d4d;
+  --accent-soft: #d6efe8;
+  --shadow: 0 18px 60px rgba(15, 31, 38, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(14, 124, 102, 0.2), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 184, 108, 0.22), transparent 28%),
+    linear-gradient(180deg, #f6f0e7 0%, #ece4d8 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 16px 0 28px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 250, 241, 0.72);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+}
+
+.brand,
+.nav {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--muted);
+}
+
+.nav a:hover,
+.contact-links a:hover {
+  color: var(--accent-strong);
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 28px;
+  min-height: 76vh;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  margin: 10px 0 18px;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--accent-strong);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-text,
+.content-card p,
+.project-summary,
+.project-points,
+.contact-card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.button.primary {
+  background: var(--accent);
+  color: #f7fbf9;
+}
+
+.button.secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.hero-panel,
+.content-card,
+.project-card,
+.contact-card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 24px;
+}
+
+.stat-card {
+  padding: 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #12352d, #0e7c66);
+  color: #ecfff8;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.8rem;
+  line-height: 1.15;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.stat-grid article {
+  padding: 18px;
+  border-radius: 20px;
+  background: var(--surface-strong);
+}
+
+.stat-grid span,
+.meta {
+  display: block;
+  color: var(--muted);
+}
+
+.stat-grid strong {
+  display: block;
+  margin-top: 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin: 10px 0 0;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  line-height: 1.1;
+}
+
+.content-card,
+.project-card,
+.contact-card {
+  padding: 26px;
+}
+
+.longform {
+  max-width: 860px;
+}
+
+.strength-grid,
+.skills-layout,
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skills-layout ul,
+.project-points {
+  margin: 14px 0 0;
+  padding-left: 18px;
+}
+
+.project-list {
+  display: grid;
+  gap: 18px;
+}
+
+.project-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.72)),
+    var(--surface);
+}
+
+.project-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.project-head h3,
+.content-card h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.project-index {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 16px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.stack {
+  margin: 18px 0 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--accent-strong);
+  font-size: 0.95rem;
+}
+
+.contact-section {
+  padding-bottom: 84px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: linear-gradient(135deg, #fff8ec, #eefaf5);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.footer {
+  padding: 0 0 36px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .strength-grid,
+  .skills-layout,
+  .timeline,
+  .contact-card {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .topbar {
+    position: static;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 12px;
+  }
+
+  .contact-card {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .topbar,
+  .hero-panel,
+  .content-card,
+  .project-card,
+  .contact-card {
+    border-radius: 22px;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.3rem;
+  }
+
+  .nav {
+    gap: 12px;
+    font-size: 0.92rem;
+  }
+}
