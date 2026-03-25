@@ -152,6 +152,8 @@ a {
   padding: 0 18px;
   border-radius: 999px;
   font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .button.primary {
@@ -398,6 +400,7 @@ a {
 .project-role {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin: 14px 0 0;
   padding: 8px 12px;
@@ -417,6 +420,7 @@ a {
 
 .project-role span {
   color: var(--text);
+  word-break: keep-all;
 }
 
 .project-story {
@@ -748,6 +752,19 @@ a {
     padding-top: 12px;
   }
 
+  .hero-copy h1 br {
+    display: none;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .button {
+    min-width: 0;
+    white-space: normal;
+  }
+
   .contact-card {
     justify-content: flex-start;
   }
@@ -775,7 +792,8 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    line-height: 1.12;
   }
 
   .diagram-frame img,
@@ -786,6 +804,78 @@ a {
 
   .core-stack-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .capability-chips {
+    gap: 8px;
+  }
+
+  .capability-chip {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 0.76rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .project-head {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .project-head h3 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .project-date {
+    order: 3;
+    width: 100%;
+    margin-top: -2px;
+  }
+
+  .project-role {
+    width: 100%;
+    align-items: flex-start;
+    border-radius: 18px;
+  }
+
+  .project-role strong {
+    border-right: 0;
+    padding-right: 0;
+  }
+
+  .project-story {
+    gap: 10px;
+  }
+
+  .story-block {
+    padding: 13px 14px;
+  }
+
+  .proficiency-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stack-badges {
+    gap: 6px;
+  }
+
+  .stack-badge {
+    font-size: 0.74rem;
   }
 
   .nav {
