@@ -235,6 +235,10 @@ a {
   margin-bottom: 22px;
 }
 
+.secondary-heading {
+  margin-top: 28px;
+}
+
 .section-heading h2 {
   margin: 10px 0 0;
   font-size: clamp(1.8rem, 3vw, 3rem);
@@ -592,6 +596,8 @@ a {
 
 .mini-projects {
   margin-top: 18px;
+  display: grid;
+  gap: 18px;
 }
 
 .project-head {
