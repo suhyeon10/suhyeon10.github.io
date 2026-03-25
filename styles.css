@@ -530,6 +530,13 @@ a {
   gap: 14px;
 }
 
+.showcase-note {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .showcase-media.two-up {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
