@@ -242,10 +242,70 @@ a {
   gap: 18px;
 }
 
+.showcase-list {
+  gap: 28px;
+}
+
 .project-card {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.72)),
     var(--surface);
+}
+
+.showcase-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1.15fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.showcase-copy {
+  position: sticky;
+  top: 104px;
+}
+
+.showcase-media {
+  display: grid;
+  gap: 14px;
+}
+
+.showcase-media.two-up {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.showcase-media.mosaic {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.media-frame {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fffdf9;
+  box-shadow: var(--shadow);
+}
+
+.media-frame.wide {
+  grid-column: 1 / -1;
+}
+
+.media-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.media-frame figcaption {
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.mini-projects {
+  margin-top: 18px;
 }
 
 .project-head {
@@ -325,7 +385,10 @@ a {
   .strength-grid,
   .skills-layout,
   .timeline,
-  .contact-card {
+  .contact-card,
+  .showcase-card,
+  .showcase-media.two-up,
+  .showcase-media.mosaic {
     grid-template-columns: 1fr;
     display: grid;
   }
@@ -343,6 +406,10 @@ a {
 
   .contact-card {
     justify-content: flex-start;
+  }
+
+  .showcase-copy {
+    position: static;
   }
 }
 

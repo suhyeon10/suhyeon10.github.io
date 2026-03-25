@@ -162,61 +162,132 @@
             <p class="eyebrow">Selected Work</p>
             <h2>Main Projects</h2>
           </div>
-          <div class="project-list">
-            <article class="project-card reveal">
-              <div class="project-head">
-                <p class="project-index">01</p>
-                <h3>aIDelete SaaS</h3>
+          <div class="project-list showcase-list">
+            <article class="project-card showcase-card reveal">
+              <div class="showcase-copy">
+                <div class="project-head">
+                  <p class="project-index">01</p>
+                  <h3>aIDelete SaaS</h3>
+                </div>
+                <p class="project-summary">
+                  의료 영상 비식별화 SaaS의 대용량 업로드 병목, 수동 배포 리스크,
+                  장애 대응 지연 문제를 개선했습니다.
+                </p>
+                <ul class="project-points">
+                  <li>S3 Presigned URL 기반 Direct Upload 전환</li>
+                  <li>에러율 15%에서 0.1%로 개선, 처리량 3배 증가</li>
+                  <li>GitLab CI/CD로 배포 30분에서 5분으로 단축</li>
+                  <li>ELK Stack 기반 중앙 로그 수집과 Slack 알림 체계 구축</li>
+                </ul>
+                <p class="stack">Java · Spring Cloud · AWS · Docker · GitLab CI/CD · ELK</p>
               </div>
-              <p class="project-summary">
-                의료 영상 비식별화 SaaS의 대용량 업로드 병목, 수동 배포 리스크,
-                장애 대응 지연 문제를 개선했습니다.
-              </p>
-              <ul class="project-points">
-                <li>S3 Presigned URL 기반 Direct Upload 전환</li>
-                <li>에러율 15%에서 0.1%로 개선, 처리량 3배 증가</li>
-                <li>GitLab CI/CD로 배포 30분에서 5분으로 단축</li>
-                <li>ELK Stack 기반 중앙 로그 수집과 Slack 알림 체계 구축</li>
-              </ul>
-              <p class="stack">Java · Spring Cloud · AWS · Docker · GitLab CI/CD · ELK</p>
+              <div class="showcase-media">
+                <figure class="media-frame wide">
+                  <img src="assets/portfolio/image1.png" alt="aIDelete AWS 아키텍처 다이어그램" />
+                  <figcaption>AWS 기반 MSA 아키텍처와 Direct Upload 파이프라인</figcaption>
+                </figure>
+              </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-head">
-                <p class="project-index">02</p>
-                <h3>메이커스</h3>
+            <article class="project-card showcase-card reveal">
+              <div class="showcase-copy">
+                <div class="project-head">
+                  <p class="project-index">02</p>
+                  <h3>메이커스</h3>
+                </div>
+                <p class="project-summary">
+                  관심사 기반 매칭과 실결제를 제공하는 플랫폼에서 점수 기반 매칭 로직과 운영 안정화를 담당했습니다.
+                </p>
+                <ul class="project-points">
+                  <li>점수 기반 룰 매칭 알고리즘 설계</li>
+                  <li>실시간 상태 동기화와 결제 플로우 안정화</li>
+                  <li>실사용자 운영 환경 기준 자동화 개선</li>
+                </ul>
+                <p class="stack">Next.js · Supabase · PostgreSQL · PortOne · Vercel</p>
               </div>
-              <p class="project-summary">
-                관심사 기반 매칭과 실결제를 제공하는 플랫폼에서 점수 기반 매칭 로직과 운영 안정화를 담당했습니다.
-              </p>
-              <ul class="project-points">
-                <li>점수 기반 룰 매칭 알고리즘 설계</li>
-                <li>실시간 상태 동기화와 결제 플로우 안정화</li>
-                <li>실사용자 운영 환경 기준 자동화 개선</li>
-              </ul>
-              <p class="stack">Next.js · Supabase · PostgreSQL · PortOne · Vercel</p>
+              <div class="showcase-media two-up">
+                <figure class="media-frame">
+                  <img src="assets/portfolio/image2.png" alt="메이커스 시스템 아키텍처" />
+                  <figcaption>Next.js + Supabase + PortOne 기반 시스템 아키텍처</figcaption>
+                </figure>
+                <figure class="media-frame">
+                  <img src="assets/portfolio/image3.png" alt="메이커스 결제 수단 선택 화면" />
+                  <figcaption>실결제 플로우 구현 화면</figcaption>
+                </figure>
+              </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-head">
-                <p class="project-index">03</p>
-                <h3>Linkus Legal</h3>
+            <article class="project-card showcase-card reveal">
+              <div class="showcase-copy">
+                <div class="project-head">
+                  <p class="project-index">03</p>
+                  <h3>Linkus Legal</h3>
+                </div>
+                <p class="project-summary">
+                  공공 계약서와 법적 문서를 수집·색인화해 계약서 위험 요소를 분석하는 RAG 기반 AI 에이전트 시스템입니다.
+                </p>
+                <ul class="project-points">
+                  <li>Hybrid Retrieval과 Cohere Reranking으로 검색 품질 개선</li>
+                  <li>ReAct Agent 기반 툴 체인 구성</li>
+                  <li>Source-Grounded Generation과 Guardrail 설계</li>
+                  <li>Redis 캐싱으로 동일 질문 응답 0.3초, 토큰 90% 절감</li>
+                </ul>
+                <p class="stack">Python · FastAPI · Next.js · LangChain · GPT-4 · Redis</p>
               </div>
-              <p class="project-summary">
-                공공 계약서와 법적 문서를 수집·색인화해 계약서 위험 요소를 분석하는 RAG 기반 AI 에이전트 시스템입니다.
-              </p>
-              <ul class="project-points">
-                <li>Hybrid Retrieval과 Cohere Reranking으로 검색 품질 개선</li>
-                <li>ReAct Agent 기반 툴 체인 구성</li>
-                <li>Source-Grounded Generation과 Guardrail 설계</li>
-                <li>Redis 캐싱으로 동일 질문 응답 0.3초, 토큰 90% 절감</li>
-              </ul>
-              <p class="stack">Python · FastAPI · Next.js · LangChain · GPT-4 · Redis</p>
+              <div class="showcase-media mosaic">
+                <figure class="media-frame wide">
+                  <img src="assets/portfolio/image4.png" alt="Linkus Legal RAG 아키텍처" />
+                  <figcaption>RAG + ReAct 오케스트레이션 아키텍처</figcaption>
+                </figure>
+                <figure class="media-frame">
+                  <img src="assets/portfolio/image5.jpeg" alt="계약서 분석 화면" />
+                  <figcaption>계약서 분석 결과 화면</figcaption>
+                </figure>
+                <figure class="media-frame">
+                  <img src="assets/portfolio/image7.jpeg" alt="상황 분석 대시보드 화면" />
+                  <figcaption>증거 보관함과 기관 안내 대시보드</figcaption>
+                </figure>
+              </div>
             </article>
 
-            <article class="project-card reveal">
+            <article class="project-card showcase-card reveal">
+              <div class="showcase-copy">
+                <div class="project-head">
+                  <p class="project-index">04</p>
+                  <h3>청년재꾸</h3>
+                </div>
+                <p class="project-summary">
+                  Kubernetes 기반 AI 종합 재무 관리 플랫폼으로 고부하 환경 처리와 무중단 배포를 목표로 설계했습니다.
+                </p>
+                <ul class="project-points">
+                  <li>HPA 기반 자동 확장 및 ResourceQuota 적용</li>
+                  <li>GitHub Actions 기반 선택적 빌드와 롤링 업데이트</li>
+                  <li>Prometheus, Grafana 기반 관측성 확보</li>
+                  <li>AI 추천과 챌린지 기능을 결합한 사용자 경험 설계</li>
+                </ul>
+                <p class="stack">Kubernetes · Spring WebFlux · GitHub Actions · Prometheus · Grafana</p>
+              </div>
+              <div class="showcase-media mosaic">
+                <figure class="media-frame wide">
+                  <img src="assets/portfolio/image10.png" alt="청년재꾸 Kubernetes 아키텍처" />
+                  <figcaption>KT Cloud Kubernetes 기반 마이크로서비스 아키텍처</figcaption>
+                </figure>
+                <figure class="media-frame">
+                  <img src="assets/portfolio/image12.png" alt="청년재꾸 AI 분석 화면" />
+                  <figcaption>AI 애널리스트 기반 투자 분석 UX</figcaption>
+                </figure>
+                <figure class="media-frame">
+                  <img src="assets/portfolio/image21.png" alt="청년재꾸 챌린지 대시보드" />
+                  <figcaption>행동 유도형 챌린지 화면과 진행률 관리</figcaption>
+                </figure>
+              </div>
+            </article>
+          </div>
+
+          <div class="mini-projects reveal">
+            <article class="content-card">
               <div class="project-head">
-                <p class="project-index">04</p>
+                <p class="project-index">05</p>
                 <h3>링커스</h3>
               </div>
               <p class="project-summary">
@@ -228,22 +299,6 @@
                 <li>백엔드와 프론트엔드 전반 담당</li>
               </ul>
               <p class="stack">Next.js · TypeScript · FastAPI · Supabase · Realtime</p>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-head">
-                <p class="project-index">05</p>
-                <h3>청년재꾸</h3>
-              </div>
-              <p class="project-summary">
-                Kubernetes 기반 AI 종합 재무 관리 플랫폼으로 고부하 환경 처리와 무중단 배포를 목표로 설계했습니다.
-              </p>
-              <ul class="project-points">
-                <li>HPA 기반 자동 확장 및 ResourceQuota 적용</li>
-                <li>GitHub Actions 기반 선택적 빌드와 롤링 업데이트</li>
-                <li>Prometheus, Grafana 기반 관측성 확보</li>
-              </ul>
-              <p class="stack">Kubernetes · Spring WebFlux · GitHub Actions · Prometheus</p>
             </article>
           </div>
         </section>
