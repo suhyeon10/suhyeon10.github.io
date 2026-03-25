@@ -164,6 +164,11 @@ a {
   background: rgba(255, 255, 255, 0.58);
 }
 
+.button.tertiary {
+  border: 1px solid rgba(23, 33, 38, 0.14);
+  background: rgba(255, 255, 255, 0.34);
+}
+
 .hero-panel,
 .content-card,
 .project-card,
