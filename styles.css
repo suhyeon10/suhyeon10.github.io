@@ -231,6 +231,39 @@ a {
   gap: 18px;
 }
 
+.logo-wall {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.logo-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 252, 246, 0.9);
+  box-shadow: var(--shadow);
+  min-height: 72px;
+}
+
+.logo-chip img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logo-chip span {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .skills-layout ul,
 .project-points {
   margin: 14px 0 0;
@@ -408,7 +441,8 @@ a {
   .contact-card,
   .showcase-card,
   .showcase-media.two-up,
-  .showcase-media.mosaic {
+  .showcase-media.mosaic,
+  .logo-wall {
     grid-template-columns: 1fr;
     display: grid;
   }
