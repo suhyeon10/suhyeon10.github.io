@@ -231,70 +231,161 @@ a {
   gap: 18px;
 }
 
-.skill-showcase {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+.core-stack {
   margin-bottom: 20px;
 }
 
-.skill-cluster {
-  padding: 22px;
+.stack-hero {
+  padding: 24px;
   border: 1px solid var(--line);
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(245, 252, 249, 0.96));
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(255, 251, 245, 0.96), rgba(233, 247, 242, 0.96));
   box-shadow: var(--shadow);
 }
 
-.cluster-heading h3 {
-  margin: 6px 0 0;
-  font-size: 1.35rem;
+.stack-hero h3 {
+  margin: 8px 0 0;
+  font-size: clamp(1.5rem, 2.3vw, 2.2rem);
+}
+
+.core-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.core-stack-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 118px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow);
+}
+
+.core-stack-item img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.core-stack-item span,
+.cluster-label {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.core-stack-item span {
+  font-size: 0.95rem;
 }
 
 .cluster-label {
-  margin: 0;
   color: var(--accent-strong);
-  font-family: "Space Grotesk", sans-serif;
   font-size: 0.85rem;
-  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.cluster-logos {
+.proficiency-board {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.proficiency-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 252, 246, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.proficiency-head h3 {
+  margin: 6px 0 0;
+  font-size: 1.15rem;
+}
+
+.proficiency-items {
+  display: grid;
+  gap: 14px;
   margin-top: 18px;
 }
 
-.cluster-logo {
-  display: flex;
+.proficiency-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
   align-items: center;
   gap: 12px;
-  padding: 14px;
-  border: 1px solid rgba(23, 33, 38, 0.08);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.8);
 }
 
-.cluster-logo img {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.cluster-logo span {
+.proficiency-row span {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 
-.cluster-copy {
-  margin: 16px 0 0;
-  color: var(--muted);
-  line-height: 1.7;
+.meter {
+  height: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(23, 33, 38, 0.09);
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0e7c66, #2aa88d);
+}
+
+.fill-95 { width: 95%; }
+.fill-92 { width: 92%; }
+.fill-90 { width: 90%; }
+.fill-88 { width: 88%; }
+.fill-84 { width: 84%; }
+.fill-78 { width: 78%; }
+.fill-76 { width: 76%; }
+.fill-74 { width: 74%; }
+.fill-72 { width: 72%; }
+.fill-70 { width: 70%; }
+.fill-64 { width: 64%; }
+.fill-62 { width: 62%; }
+.fill-60 { width: 60%; }
+.fill-58 { width: 58%; }
+.fill-56 { width: 56%; }
+
+.stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.stack-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(23, 33, 38, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.stack-badge img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
 .skills-layout ul,
@@ -537,7 +628,7 @@ a {
   .showcase-card,
   .showcase-media.two-up,
   .showcase-media.mosaic,
-  .skill-showcase {
+  .proficiency-board {
     grid-template-columns: 1fr;
     display: grid;
   }
@@ -589,8 +680,8 @@ a {
     max-height: none;
   }
 
-  .cluster-logos {
-    grid-template-columns: 1fr;
+  .core-stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .nav {
