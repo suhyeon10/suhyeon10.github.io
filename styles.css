@@ -574,6 +574,7 @@ a {
 .project-head {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 14px;
 }
 
@@ -581,6 +582,15 @@ a {
 .content-card h3 {
   margin: 0;
   font-size: 1.35rem;
+}
+
+.project-date {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.06em;
 }
 
 .project-index {
