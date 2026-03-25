@@ -237,6 +237,12 @@ a {
   padding-left: 18px;
 }
 
+.project-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
 .project-list {
   display: grid;
   gap: 18px;
