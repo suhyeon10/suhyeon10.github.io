@@ -287,7 +287,7 @@
                 <p class="stack">Java · Spring Cloud · AWS · Docker · GitLab CI/CD · ELK</p>
               </div>
               <div class="showcase-media">
-                <figure class="media-frame wide diagram-frame">
+                <figure class="media-frame wide diagram-frame zoomable">
                   <img src="assets/portfolio/image1.png" alt="aIDelete AWS 아키텍처 다이어그램" />
                   <figcaption>AWS 기반 MSA 아키텍처와 Direct Upload 파이프라인</figcaption>
                 </figure>
@@ -314,11 +314,11 @@
                 <p class="stack">Next.js · Supabase · PostgreSQL · PortOne · Vercel</p>
               </div>
               <div class="showcase-media two-up">
-                <figure class="media-frame diagram-frame">
+                <figure class="media-frame diagram-frame zoomable">
                   <img src="assets/portfolio/image2.png" alt="메이커스 시스템 아키텍처" />
                   <figcaption>Next.js + Supabase + PortOne 기반 시스템 아키텍처</figcaption>
                 </figure>
-                <figure class="media-frame screen-frame">
+                <figure class="media-frame screen-frame zoomable">
                   <img src="assets/portfolio/image3.png" alt="메이커스 결제 수단 선택 화면" />
                   <figcaption>실결제 플로우 구현 화면</figcaption>
                 </figure>
@@ -343,15 +343,15 @@
                 <p class="stack">Python · FastAPI · Next.js · LangChain · GPT-4 · Redis</p>
               </div>
               <div class="showcase-media mosaic">
-                <figure class="media-frame wide diagram-frame">
+                <figure class="media-frame wide diagram-frame zoomable">
                   <img src="assets/portfolio/image4.png" alt="Linkus Legal RAG 아키텍처" />
                   <figcaption>RAG + ReAct 오케스트레이션 아키텍처</figcaption>
                 </figure>
-                <figure class="media-frame screen-frame">
+                <figure class="media-frame screen-frame zoomable">
                   <img src="assets/portfolio/image5.jpeg" alt="계약서 분석 화면" />
                   <figcaption>계약서 분석 결과 화면</figcaption>
                 </figure>
-                <figure class="media-frame screen-frame">
+                <figure class="media-frame screen-frame zoomable">
                   <img src="assets/portfolio/image7.jpeg" alt="상황 분석 대시보드 화면" />
                   <figcaption>증거 보관함과 기관 안내 대시보드</figcaption>
                 </figure>
@@ -376,15 +376,15 @@
                 <p class="stack">Kubernetes · Spring WebFlux · GitHub Actions · Prometheus · Grafana</p>
               </div>
               <div class="showcase-media mosaic">
-                <figure class="media-frame wide diagram-frame">
+                <figure class="media-frame wide diagram-frame zoomable">
                   <img src="assets/portfolio/image10.png" alt="청년재꾸 Kubernetes 아키텍처" />
                   <figcaption>KT Cloud Kubernetes 기반 마이크로서비스 아키텍처</figcaption>
                 </figure>
-                <figure class="media-frame screen-frame">
+                <figure class="media-frame screen-frame zoomable">
                   <img src="assets/portfolio/image12.png" alt="청년재꾸 AI 분석 화면" />
                   <figcaption>AI 애널리스트 기반 투자 분석 UX</figcaption>
                 </figure>
-                <figure class="media-frame screen-frame">
+                <figure class="media-frame screen-frame zoomable">
                   <img src="assets/portfolio/image21.png" alt="청년재꾸 챌린지 대시보드" />
                   <figcaption>행동 유도형 챌린지 화면과 진행률 관리</figcaption>
                 </figure>
@@ -459,6 +459,14 @@
       <footer class="footer">
         <p>© <span id="year"></span> Jang Suhyeon. Built for GitHub Pages.</p>
       </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" aria-label="닫기">×</button>
+      <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="" />
+        <p id="lightboxCaption"></p>
+      </div>
     </div>
 
     <script src="script.js"></script>
