@@ -251,8 +251,8 @@ a {
 .core-stack-grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 18px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .core-stack-item {
@@ -260,18 +260,18 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: 118px;
-  padding: 16px;
+  gap: 8px;
+  min-height: 88px;
+  padding: 12px 10px;
   border: 1px solid var(--line);
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.84);
   box-shadow: var(--shadow);
 }
 
 .core-stack-item img {
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -283,7 +283,7 @@ a {
 }
 
 .core-stack-item span {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 
 .cluster-label {
@@ -365,26 +365,26 @@ a {
 .stack-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
+  gap: 8px;
+  margin-top: 16px;
 }
 
 .stack-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 6px;
+  padding: 6px 10px;
   border: 1px solid rgba(23, 33, 38, 0.1);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.74);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
 .stack-badge img {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   object-fit: contain;
 }
 
