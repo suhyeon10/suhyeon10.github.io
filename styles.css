@@ -3,7 +3,7 @@
   --surface: rgba(255, 252, 246, 0.82);
   --surface-strong: #fffaf1;
   --text: #172126;
-  --muted: #54606a;
+  --muted: #465058;
   --line: rgba(23, 33, 38, 0.12);
   --accent: #0e7c66;
   --accent-strong: #0a5d4d;
@@ -32,6 +32,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .page-shell {
@@ -74,7 +80,30 @@ a {
   color: var(--muted);
 }
 
+.nav a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
 .nav a:hover,
+.nav a.active,
 .contact-links a:hover {
   color: var(--accent-strong);
 }
@@ -156,9 +185,22 @@ a {
   white-space: nowrap;
 }
 
+.button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 31, 38, 0.1);
+}
+
 .button.primary {
   background: var(--accent);
   color: #f7fbf9;
+}
+
+.button.primary:hover {
+  background: var(--accent-strong);
 }
 
 .button.secondary {
@@ -166,9 +208,17 @@ a {
   background: rgba(255, 255, 255, 0.58);
 }
 
+.button.secondary:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
 .button.tertiary {
   border: 1px solid rgba(23, 33, 38, 0.14);
   background: rgba(255, 255, 255, 0.34);
+}
+
+.button.tertiary:hover {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .hero-panel,
@@ -249,6 +299,14 @@ a {
 .project-card,
 .contact-card {
   padding: 26px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.strength-grid .content-card:hover,
+.skills-layout .content-card:hover,
+.mini-projects .content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 70px rgba(15, 31, 38, 0.16);
 }
 
 .longform {
@@ -299,6 +357,15 @@ a {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.84);
   box-shadow: var(--shadow);
+}
+
+.core-stack-item {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.core-stack-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(15, 31, 38, 0.14);
 }
 
 .core-stack-item img {
@@ -376,6 +443,7 @@ a {
   height: 100%;
   border-radius: inherit;
   background: linear-gradient(90deg, #0e7c66, #2aa88d);
+  transition: width 0.8s ease;
 }
 
 .fill-95 { width: 95%; }
@@ -560,6 +628,11 @@ a {
 
 .zoomable {
   cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.02);
 }
 
 .media-frame.wide {
@@ -625,14 +698,16 @@ a {
 .project-index {
   width: 48px;
   height: 48px;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0;
   border-radius: 16px;
-  background: var(--accent-soft);
+  background: linear-gradient(135deg, var(--accent-soft), rgba(14, 124, 102, 0.18));
   color: var(--accent-strong);
   font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
@@ -661,6 +736,10 @@ a {
   gap: 10px;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
+}
+
+.contact-links a {
+  transition: color 0.2s ease;
 }
 
 .footer {
@@ -725,6 +804,61 @@ a {
   font-size: 2rem;
   line-height: 1;
   cursor: pointer;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 200;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+.nav a.active {
+  color: var(--accent-strong);
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 50;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 241, 0.88);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  color: var(--accent-strong);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: var(--accent-soft);
 }
 
 .reveal {
@@ -894,5 +1028,13 @@ a {
   .nav {
     gap: 12px;
     font-size: 0.92rem;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
   }
 }
