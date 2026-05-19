@@ -566,6 +566,7 @@ a {
 
 .project-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 18px;
 }
@@ -728,6 +729,15 @@ a {
   justify-content: space-between;
   gap: 18px;
   background: linear-gradient(135deg, #fff8ec, #eefaf5);
+}
+
+.contact-copy {
+  max-width: 620px;
+}
+
+.contact-note {
+  margin-top: 8px;
+  font-size: 0.96rem;
 }
 
 .contact-links {
@@ -916,6 +926,10 @@ a {
     justify-content: flex-start;
   }
 
+  .contact-links {
+    width: 100%;
+  }
+
   .showcase-copy {
     position: static;
   }
@@ -974,6 +988,16 @@ a {
   }
 
   .hero-actions .button {
+    width: 100%;
+  }
+
+  .project-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project-actions .button,
+  .contact-links .button {
     width: 100%;
   }
 
