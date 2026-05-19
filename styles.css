@@ -566,6 +566,7 @@ a {
 
 .project-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   margin-top: 18px;
 }
@@ -728,6 +729,15 @@ a {
   justify-content: space-between;
   gap: 18px;
   background: linear-gradient(135deg, #fff8ec, #eefaf5);
+}
+
+.contact-copy {
+  max-width: 620px;
+}
+
+.contact-note {
+  margin-top: 8px;
+  font-size: 0.96rem;
 }
 
 .contact-links {
@@ -916,6 +926,10 @@ a {
     justify-content: flex-start;
   }
 
+  .contact-links {
+    width: 100%;
+  }
+
   .showcase-copy {
     position: static;
   }
@@ -974,6 +988,16 @@ a {
   }
 
   .hero-actions .button {
+    width: 100%;
+  }
+
+  .project-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project-actions .button,
+  .contact-links .button {
     width: 100%;
   }
 
@@ -1036,5 +1060,152 @@ a {
     width: 42px;
     height: 42px;
     font-size: 1rem;
+  }
+}
+
+/* Submission PDF override */
+.privacy-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 11mm;
+  }
+
+  :root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-strong: #ffffff;
+    --text: #172126;
+    --muted: #465058;
+    --line: rgba(23, 33, 38, 0.16);
+    --accent-soft: #eef7f4;
+    --shadow: none;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page-shell {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .skip-link,
+  .topbar,
+  .back-to-top,
+  .lightbox {
+    display: none !important;
+  }
+
+  .section {
+    padding: 20px 0;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.18fr 0.82fr;
+    gap: 18px;
+    min-height: auto !important;
+    align-items: start;
+    padding-top: 0;
+    padding-bottom: 18px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .hero-copy h1 {
+    margin: 8px 0 12px;
+    font-size: 2.08rem;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  .hero-text {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .privacy-note {
+    margin-top: 12px;
+    font-size: 0.84rem;
+    line-height: 1.55;
+  }
+
+  .capability-chips {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .capability-chip {
+    min-height: 30px;
+    padding: 0 10px;
+    background: #ffffff;
+    font-size: 0.72rem;
+  }
+
+  .hero-actions {
+    margin-top: 16px;
+  }
+
+  .button {
+    min-height: 36px;
+    padding: 0 13px;
+    font-size: 0.82rem;
+  }
+
+  .hero-panel {
+    padding: 16px;
+  }
+
+  .stat-card {
+    padding: 16px;
+    border: 1px solid var(--line);
+    background: #ffffff;
+    color: var(--text);
+  }
+
+  .stat-grid {
+    gap: 10px;
+  }
+
+  .stat-grid article {
+    padding: 13px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+  }
+
+  .hero-panel,
+  .content-card,
+  .project-card,
+  .contact-card,
+  .proficiency-card,
+  .stack-hero,
+  .story-block,
+  .project-visual {
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .content-card,
+  .project-card,
+  .project-showcase,
+  .experience-item {
+    break-inside: avoid;
   }
 }
