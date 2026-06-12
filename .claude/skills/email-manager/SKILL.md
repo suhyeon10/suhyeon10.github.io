@@ -29,6 +29,17 @@ description: Inbox manager for Gmail. Use when the user wants to triage, organiz
 > 현재 연결된 Gmail MCP는 `create_draft`만 노출하고 전송 도구가 없다 →
 > 지금은 위 3번 폴백으로 동작한다. 전송 스코프가 있는 MCP가 붙으면 1·2번으로 바로 전송.
 
+## 다중 계정 (여러 메일함)
+사용자는 둘 이상의 Gmail 계정을 관리할 수 있다(예: `suhyeonjan10@gmail.com`,
+`moneynena1010@gmail.com`).
+1. **연결 탐색**: 시작 시 사용 가능한 Gmail MCP 커넥션을 확인한다(ToolSearch로
+   gmail 도구 탐색). 계정마다 별도 MCP 서버로 연결된다.
+2. **대상 선택**: 계정이 둘 이상이면 어느 메일함을 다룰지 먼저 확인하고, 작업 결과에
+   **계정 이름을 명시**한다(섞이지 않게).
+3. **미연결 안내**: 사용자가 언급한 계정이 연결돼 있지 않으면, 임의로 다른 계정으로
+   처리하지 말고 **"해당 계정 Gmail 커넥터를 환경 설정에서 추가 인증해 달라"**고 알린다.
+   (현재 연결: `suhyeonjan10@gmail.com` 1개. `moneynena1010@gmail.com`은 미연결.)
+
 ## 안전 원칙
 - **읽기·검색**은 바로 한다.
 - **라벨 변경·초안 작성**은 일괄 처리 전에 무엇을 할지 먼저 요약해 보여준다.
