@@ -1,0 +1,19 @@
+{
+  "_comment": "복사해서 .mcp.local.json 으로 만들고 절대경로/시크릿 채울 것. .mcp.local.json 은 .gitignore 처리됨. 시크릿은 가급적 환경변수(${VAR})로.",
+  "mcpServers": {
+    "gmail-mcp": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--directory",
+        "/ABSOLUTE/PATH/TO/gmail-mcp/server",
+        "python",
+        "server.py"
+      ],
+      "env": {
+        "GOOGLE_CLIENT_ID": "${GOOGLE_CLIENT_ID}",
+        "GOOGLE_CLIENT_SECRET": "${GOOGLE_CLIENT_SECRET}"
+      }
+    }
+  }
+}

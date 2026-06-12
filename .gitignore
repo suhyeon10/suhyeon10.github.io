@@ -1,0 +1,9 @@
+# MCP 로컬 설정 / 시크릿 — 공개 저장소이므로 절대 커밋 금지
+.mcp.local.json
+.mcp.json
+*.local.json
+.env
+.env.*
+gmail-mcp/
+**/token*.json
+**/credentials*.json
